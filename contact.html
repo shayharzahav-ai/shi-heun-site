@@ -126,7 +126,14 @@
 <main id="main">
 
 <section class="pagehero">
-  <div class="pagehero__media"><img src="assets/img/action/judo-girl-2560.webp" srcset="assets/img/action/judo-girl-480.webp 480w, assets/img/action/judo-girl-800.webp 800w, assets/img/action/judo-girl-1280.webp 1280w, assets/img/action/judo-girl-1920.webp 1920w, assets/img/action/judo-girl-2560.webp 2560w" sizes="100vw" width="5286" height="3524" alt="מתאמנות צעירות בתחרות ג׳ודו" loading="eager" decoding="async" fetchpriority="high"></div>
+  <div class="pagehero__media">
+    <video class="hero-clip hero-clip--center" autoplay muted playsinline preload="auto"
+           poster="assets/video/crest-legend-poster.webp"
+           aria-label="סמל שאי-הון נחשף מתוך שמי הזריחה">
+      <source src="assets/video/crest-legend-short.mp4" type="video/mp4" media="(max-width:640px)">
+      <source src="assets/video/crest-legend.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="pagehero__scrim"></div>
   <div class="pagehero__inner wrap">
     <p class="eyebrow">צור קשר</p>
@@ -193,7 +200,6 @@
         <h4>אימונים</h4>
         <ul>
           <li><a href="courses.html">קורסים וקבוצות</a></li>
-          <li><a href="courses.html#schedule">מערכת שעות</a></li>
           <li><a href="events.html">אירועים</a></li>
         </ul>
       </div>

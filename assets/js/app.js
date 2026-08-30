@@ -126,6 +126,13 @@
       hv.pause();
       return;
     }
+    /* A clip can ask to run slower than real time via data-rate. Some
+       browsers reset the rate when the source loads, so set it again then. */
+    var rate = parseFloat(hv.dataset.rate);
+    if (rate > 0) {
+      hv.playbackRate = rate;
+      hv.addEventListener('loadedmetadata', function () { hv.playbackRate = rate; });
+    }
     /* Keep decoding off the phone's back once the hero is scrolled away —
        the clip is still composited behind the sticky nav otherwise. */
     if (!('IntersectionObserver' in window)) return;
